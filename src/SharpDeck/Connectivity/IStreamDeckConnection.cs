@@ -38,9 +38,14 @@ namespace SharpDeck.Connectivity
         event EventHandler<DeviceEventArgs> DeviceDidDisconnect;
 
         /// <summary>
-        /// Occurs when a dial is pressed, or released.
+        /// Occurs when a dial is pressed.
         /// </summary>
-        event EventHandler<ActionEventArgs<DialPayload>> DialPress;
+        event EventHandler<ActionEventArgs<DialPayload>> DialDown;
+
+        /// <summary>
+        /// Occurs when a dial is released.
+        /// </summary>
+        event EventHandler<ActionEventArgs<DialPayload>> DialUp;
 
         /// <summary>
         /// Occurs when a dial rotates.

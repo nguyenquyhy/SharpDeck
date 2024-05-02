@@ -42,7 +42,8 @@ namespace SharpDeck.Connectivity
             connection.WillAppear += this.Action_WillAppear;
 
             // action propagation
-            connection.DialPress                        += (_, e) => this.InvokeOnAction(e, a => a.OnDialPress);
+            connection.DialDown                         += (_, e) => this.InvokeOnAction(e, a => a.OnDialDown);
+            connection.DialUp                           += (_, e) => this.InvokeOnAction(e, a => a.OnDialUp);
             connection.DialRotate                       += (_, e) => this.InvokeOnAction(e, a => a.OnDialRotate);
             connection.DidReceiveSettings               += (_, e) => this.InvokeOnAction(e, a => a.OnDidReceiveSettings);
             connection.KeyDown                          += (_, e) => this.InvokeOnAction(e, a => a.OnKeyDown);

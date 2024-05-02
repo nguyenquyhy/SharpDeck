@@ -154,11 +154,19 @@ namespace SharpDeck
         }
 
         /// <summary>
-        /// Occurs when <see cref="IStreamDeckConnection.DialPress"/> is received for this instance.
+        /// Occurs when <see cref="IStreamDeckConnection.DialDown"/> is received for this instance.
         /// </summary>
         /// <param name="args">The <see cref="ActionEventArgs{DialPayload}" /> instance containing the event data.</param>
         /// <returns>The task of handling the event.</returns>
-        protected internal virtual Task OnDialPress(ActionEventArgs<DialPayload> args)
+        protected internal virtual Task OnDialDown(ActionEventArgs<DialPayload> args)
+            => Task.CompletedTask;
+
+        /// <summary>
+        /// Occurs when <see cref="IStreamDeckConnection.DialUp"/> is received for this instance.
+        /// </summary>
+        /// <param name="args">The <see cref="ActionEventArgs{DialPayload}" /> instance containing the event data.</param>
+        /// <returns>The task of handling the event.</returns>
+        protected internal virtual Task OnDialUp(ActionEventArgs<DialPayload> args)
             => Task.CompletedTask;
 
         /// <summary>
